@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./c.css" />
+  </head>
+  <body>
+    <div class="foorm">
+      <div class="formm">
+        <p style="font-size: xx-large">
+          <b>Color palette generator</b>
+        </p>
+        <br /><br />
+
+        <form action="./teimer.html" method="get" id="timer-form">
+          <div class="contenter">
+            <div>
+              <label for="num_color"
+                ><b style="font-size: x-large">
+                  Enter number of Houres
+                </b></label
+              ><br /><br />
+              <input type="text" id="houres_limet" name="houres" /><br /><br />
+            </div>
+            <div>
+              <label for="num_color"
+                ><b style="font-size: x-large">
+                  Enter number of Minets
+                </b></label
+              ><br /><br />
+              <input type="text" id="minets_limet" name="minets" /><br /><br />
+            </div>
+          </div>
+          <input type="submit" id="submit" value="Send Timer" />
+        </form>
+
+        <br />
+        <br />
+      </div>
+    </div>
+    <script>
+      document.getElementById("timer-form").addEventListener("submit", (e) => {
+        // e.preventDefault();
+        console.log("HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE");
+        localStorage.setItem(
+          "houres-lmet",
+          document.getElementById("houres_limet").value
+        );
+        localStorage.setItem(
+          "minets_lmet",
+          document.getElementById("minets_limet").value
+        );
+        timer();
+        console.log("HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE");
+        // clg("HERE");
+      });
+    </script>
+    <script src="./timer.js"></script>
+  </body>
+</html>
